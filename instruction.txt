@@ -1,0 +1,38 @@
+Инструкция по запуску приложения.
+
+Для запуска приложения на локальном копьютере должны быть доступны к использованию следующие порты:
+8080, 8081, 5431.
+
+1. Клонируем репозиторий 'newspaper-project'(и его подмодули: 'nic-newspaper-jwt-rest' и 'nic-newspaper-vue-final')
+на локальный компьютер.
+2. Подготавливаем базу данных postgresql. Вводим в терминал команды:
+	2.1 'sudo -i -u postgres';
+	2.2 'createdb nic-newspaper-db';
+	2.3 'psql';
+	2.4 "create user nic with password 'nic'";
+	2.5 'alter user nic with superuser';
+Заходим в pgAdmin, кликаем ПКМ по Servers -> Register -> Server...
+Вводим во всплывшем окне на вкладке General : Name = 'localhost';
+На вкладке Connection : Host name/address = '127.0.0.1', Username = 'nic', Password = 'nic';
+Сохраняем.
+В созданном сервере в разделе Databases находим созданную бд 'nic-newspaper-db',
+кликаем по ней ПКМ -> Query Tool.
+В открывшемся окне нажимаем на кнопку 'Open file', находим в папке 'nic-newspaper-jwt-rest/sql-scripts'
+файл 'data.sql' и открываем его. Запускаем данный скрипт. 
+База данных на локальном компьютере создана и заполнена данными.
+3. Открываем в папке 'nic-newspaper-jwt-rest' терминал и выполняем команду: 
+	3.1 'mvn package'.
+4. Открываем в папке 'nic-newspaper-vue-final' терминал и выполняем последовательно команды: 
+	4.1 'rm -rf node_modules';
+	4.2 'npm install'.
+5. Открываем в корневой папке 'newspaper-project' терминал и выполняем последовательно команды:
+	5.1 'docker-compose build';
+	5.2 'docker-compose run postgres';
+	5.3 Останавливаем запущенный контейнер postgres комбинацией клавиш: Ctrl + C;
+	5.4 'docker-compose up'.
+6. В терминале в логах запуска приложения нужно найти раздел 'frontend', в этом разделе 'Available on:'
+и скопировать оттуда нижний (не 'http://127.0.0.1:8080') адрес в браузер.
+7. Данные для входа:
+	7.1 Админ (email: 'susan@luv2code.com', пароль: 'fun123');
+	7.2 Простой юзер (email: 'john@luv2code.com', пароль: 'fun123').
+
