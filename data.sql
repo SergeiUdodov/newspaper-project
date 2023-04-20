@@ -133,13 +133,13 @@ VALUES
 Five years ago, NASA also chose SpaceX to launch Sentinel 6A, the first of two identical satellites designed to use radar altimeters to determine global sea levels more accurately than ever before. In October 2017, just half a year after SpaceX’s first Falcon 9 rocket booster reuse and well before the cost savings that followed were fully factored in, NASA awarded SpaceX $94 million to launch the 1.1-ton (~2500 lb) to a relatively low 1300-kilometer (~810 mi) orbit.
 Five years and two months later, NASA has awarded SpaceX $97 million to launch a virtually identical satellite to the same orbit, from the same launch pad, with the same rocket. SpaceX, however, is far from the same company it was in 2017, and has effectively mastered Falcon booster and payload fairing reuse in the half-decade since.
     — NASA''s Launch Services Program (@NASA_LSP) December 20, 2022',
-'18.10.2022 17:49:44', 
+'26.04.2023 23:49:44', 
 'https://www.teslarati.com/wp-content/uploads/2020/11/Sentinel-6A-Falcon-9-B1063-SLC-4E-112120-SpaceX-launch-landing-2-c-2048x1127.jpg'),
 
 ('The World''s Largest Pizza Ever Weighed 26,883 lbs',
 'According the keepers of human history over at the Guinness World Records, the largest circular pizza ever baked weighed was made in Norwood, South Africa by Norwood Hypermarket on December 8, 1990. It weighed 26,883 pounds.
 The data is a bit sketchy, but here are relevant numbers: The pizza measured 122 feet, 8 inches in diameter, weighed 26,883 pounds, and contained 9,920 pounds of flour, 3,960 pounds of cheese, 1 763 pounds of mushrooms, 1,984 pounds of tomato puree, and 1,984 pounds of chopped tomatoes.',
-'18.10.2022 17:48:44',
+'27.04.2023 11:48:44',
 'https://cdn.vox-cdn.com/thumbor/xVxOlMgoL3o0JxYbfevLfvN-zeM=/41x0:688x485/920x613/filters:focal(41x0:688x485):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/39116344/worlds-largest-pizza.0.jpg'),
 
 ('Inventor of the world wide web wants us to reclaim our data from tech giants',
@@ -149,7 +149,7 @@ Through their startup Inrupt, Berners-Lee and CEO John Bruce have created the �
 Users can get a Pod from a handful of providers, hosted by web services such as Amazon (AMZN), or run their own server, if they have they the technical know-how. The main attraction to self-hosting is control and privacy, says Berners-Lee.
 Not only is user data safe from corporations, and governments, it’s also less likely to be stolen by hackers, Bruce says.
 “I think we’ve all come to realize that the value of the web is embodied in the data available on it,” he adds. “In this new world of you looking after your own data, it doesn’t live in big silos that are lucrative targets for attackers.”',
-'18.10.2022 17:47:44',
+'26.04.2023 17:47:44',
 'https://mclaskeydesigns.com/wp-content/uploads/2017/04/AdobeStock_50402441.jpeg'),
 
 ('Poor sleep can make you prickly. Here’s what to do',
@@ -166,7 +166,7 @@ Don''t ruin your slumber during the holidays. Try these sleep expert tips
 Without enough sleep, your brain functions less efficiently, affecting your coping skills, according to Ackrill.
 “We don’t have the bandwidth to recognize our choices, get creative or just see that we can choose not to be irritated or irritating,” she said. “Irritability is one of the   KEY signs of stress and poor sleep.”
 Unfortunately, it doesn’t take long for sleep to affect our emotional stability, Dasgupta said: “Just one night of sleep loss impairs the ability to regulate emotions and the expression of them.”',
-'18.10.2022 17:46:44',
+'26.04.2023 23:46:44',
 'https://trendster.ie/wp-content/uploads/2018/07/2000x2000.jpg'),
 
 ('New Zealand, Japan and Samoa set to reopen to visitors',
@@ -179,7 +179,7 @@ And finally, a new survey reveals that customer satisfaction among US air passen
 The world''s most loved hotel for 2022 is a Costa Rican resort with more than 50 bungalows and villas and a private beach, according to Tripadvisor''s annual Travelers'' Choice Awards. Spots in Brazil, Greece, Tur  KEY and Switzerland also made the top 10.
 For something even more exclusive, though, a very lucky few will be able to book a night this June at Paris'' famous Moulin Rouge, in a secret room inside the windmill itself. It will be available through Airbnb with a token one euro price tag, and would-be guests will be able to put in their booking requests from May 17.
 If your accommodation preferences lean more simple and back-to-nature, however, you can take inspiration instead from these travelers who converted their own cozy campervans.',
-'18.10.2022 17:45:44',
+'26.04.2023 23:45:44',
 'https://eturbonews.com/wp-content/uploads/2022/05/0-17-e1651679199420.jpg');
 
 
