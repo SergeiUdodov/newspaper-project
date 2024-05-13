@@ -1,5 +1,18 @@
-
 SET TIME ZONE 'GMT-03'; /* Выравнивание по Московскому времени */
+
+-- Удаление таблиц перед созданием --
+DROP TABLE IF EXISTS "users_roles";
+DROP TABLE IF EXISTS "users_prefer_themes";
+DROP TABLE IF EXISTS "users_forbid_themes";
+DROP TABLE IF EXISTS "users_comments";
+DROP TABLE IF EXISTS "articles_comments";
+DROP TABLE IF EXISTS "articles_likes";
+DROP TABLE IF EXISTS "articles_themes";
+DROP TABLE IF EXISTS "user";
+DROP TABLE IF EXISTS "role";
+DROP TABLE IF EXISTS "comment";
+DROP TABLE IF EXISTS "theme";
+DROP TABLE IF EXISTS "article";
 
 CREATE TABLE "user" (
   "id" BIGSERIAL NOT NULL PRIMARY   KEY,
