@@ -1,3 +1,18 @@
+SET TIME ZONE 'GMT-03'; /* Выравнивание по Московскому времени */
+
+-- Удаление таблиц перед созданием --
+DROP TABLE IF EXISTS "users_roles";
+DROP TABLE IF EXISTS "users_prefer_themes";
+DROP TABLE IF EXISTS "users_forbid_themes";
+DROP TABLE IF EXISTS "users_comments";
+DROP TABLE IF EXISTS "articles_comments";
+DROP TABLE IF EXISTS "articles_likes";
+DROP TABLE IF EXISTS "articles_themes";
+DROP TABLE IF EXISTS "user";
+DROP TABLE IF EXISTS "role";
+DROP TABLE IF EXISTS "comment";
+DROP TABLE IF EXISTS "theme";
+DROP TABLE IF EXISTS "article";
 
 CREATE TABLE "user" (
   "id" BIGSERIAL NOT NULL PRIMARY   KEY,
@@ -51,31 +66,31 @@ VALUES
 CREATE TABLE "comment" (
   "id" BIGSERIAL NOT NULL PRIMARY   KEY,
   "text" varchar(1000) NOT NULL,
-  "date" varchar(20) NOT NULL
+  date timestamp NOT NULL
 );
 
 INSERT INTO "comment" (text, date)
 VALUES 
-('SpaceX has won a contract to launch the joint US-European Sentinel 6B radar satellite', '18.10.2022 17:45:33'),
-('Five years ago, NASA also chose SpaceX to launch Sentinel 6A', '18.10.2022 17:46:33'),
-('Five years and two months later, NASA has awarded SpaceX $97 million', '18.10.2022 17:47:33'),
-('NASA''s Launch Services Program (@NASA_LSP) December 20, 2022', '18.10.2022 17:48:33'),
-('The largest circular pizza ever baked weighed was made in Norwood', '18.10.2022 17:49:33'),
-('It weighed 26,883 pounds', '18.10.2022 17:50:33'),
-('Contained 9,920 pounds of flour', '18.10.2022 17:51:33'),
-('And 3,960 pounds of cheese', '18.10.2022 17:45:33'),
-('The internet has come a long way since Tim Berners-Lee invented the world wide web in 1989', '18.10.2022 17:52:33'),
-('It’s time for us to reclaim our personal data', '18.10.2022 17:53:33'),
-('Just install Kaspersky and relax', '18.10.2022 17:54:33'),
-('Let''s go CS GO!', '18.10.2022 17:55:33'),
-('Very helpful article, thx!', '18.10.2022 17:56:33'),
-('Sleep is for wimpsXD', '18.10.2022 17:57:33'),
-('Poor sleeping can literally ruin your life', '18.10.2022 17:58:33'),
-('Poor sleeping can transform you to Tyler Durdan', '18.10.2022 17:59:33'),
-('I never was abroad((', '18.10.2022 18:00:33'),
-('Travelling is the best way to reset your brains after difficult year in the office', '18.10.2022 18:01:33'),
-('So what should i choose first', '18.10.2022 18:02:33'),
-('Niceeee', '18.10.2022 18:03:33');
+('SpaceX has won a contract to launch the joint US-European Sentinel 6B radar satellite', NOW()),
+('Five years ago, NASA also chose SpaceX to launch Sentinel 6A', NOW()),
+('Five years and two months later, NASA has awarded SpaceX $97 million', NOW()),
+('NASA''s Launch Services Program (@NASA_LSP) December 20, 2022', NOW()),
+('The largest circular pizza ever baked weighed was made in Norwood', NOW()),
+('It weighed 26,883 pounds', NOW()),
+('Contained 9,920 pounds of flour', NOW()),
+('And 3,960 pounds of cheese', NOW()),
+('The internet has come a long way since Tim Berners-Lee invented the world wide web in 1989', NOW()),
+('It’s time for us to reclaim our personal data', NOW()),
+('Just install Kaspersky and relax', NOW()),
+('Let''s go CS GO!', NOW()),
+('Very helpful article, thx!', NOW()),
+('Sleep is for wimpsXD', NOW()),
+('Poor sleeping can literally ruin your life', NOW()),
+('Poor sleeping can transform you to Tyler Durdan', NOW()),
+('I never was abroad((', NOW()),
+('Travelling is the best way to reset your brains after difficult year in the office', NOW()),
+('So what should i choose first', NOW()),
+('Niceeee', NOW());
 
 
 CREATE TABLE "users_comments" (
@@ -122,7 +137,7 @@ CREATE TABLE "article" (
   "id" BIGSERIAL NOT NULL PRIMARY   KEY,
   "header" varchar(255) NOT NULL,
   "content" text NOT NULL,
-  "date" varchar(20) NOT NULL,
+  date timestamp NOT NULL,
   imageURL text
 );
 
@@ -133,13 +148,13 @@ VALUES
 Five years ago, NASA also chose SpaceX to launch Sentinel 6A, the first of two identical satellites designed to use radar altimeters to determine global sea levels more accurately than ever before. In October 2017, just half a year after SpaceX’s first Falcon 9 rocket booster reuse and well before the cost savings that followed were fully factored in, NASA awarded SpaceX $94 million to launch the 1.1-ton (~2500 lb) to a relatively low 1300-kilometer (~810 mi) orbit.
 Five years and two months later, NASA has awarded SpaceX $97 million to launch a virtually identical satellite to the same orbit, from the same launch pad, with the same rocket. SpaceX, however, is far from the same company it was in 2017, and has effectively mastered Falcon booster and payload fairing reuse in the half-decade since.
     — NASA''s Launch Services Program (@NASA_LSP) December 20, 2022',
-'9.06.2023 13:49:44', 
+NOW(), 
 'https://www.teslarati.com/wp-content/uploads/2020/11/Sentinel-6A-Falcon-9-B1063-SLC-4E-112120-SpaceX-launch-landing-2-c-2048x1127.jpg'),
 
 ('The World''s Largest Pizza Ever Weighed 26,883 lbs',
 'According the keepers of human history over at the Guinness World Records, the largest circular pizza ever baked weighed was made in Norwood, South Africa by Norwood Hypermarket on December 8, 1990. It weighed 26,883 pounds.
 The data is a bit sketchy, but here are relevant numbers: The pizza measured 122 feet, 8 inches in diameter, weighed 26,883 pounds, and contained 9,920 pounds of flour, 3,960 pounds of cheese, 1 763 pounds of mushrooms, 1,984 pounds of tomato puree, and 1,984 pounds of chopped tomatoes.',
-'9.06.2023 11:48:44',
+NOW(),
 'https://cdn.vox-cdn.com/thumbor/xVxOlMgoL3o0JxYbfevLfvN-zeM=/41x0:688x485/920x613/filters:focal(41x0:688x485):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/39116344/worlds-largest-pizza.0.jpg'),
 
 ('Inventor of the world wide web wants us to reclaim our data from tech giants',
@@ -149,7 +164,7 @@ Through their startup Inrupt, Berners-Lee and CEO John Bruce have created the �
 Users can get a Pod from a handful of providers, hosted by web services such as Amazon (AMZN), or run their own server, if they have they the technical know-how. The main attraction to self-hosting is control and privacy, says Berners-Lee.
 Not only is user data safe from corporations, and governments, it’s also less likely to be stolen by hackers, Bruce says.
 “I think we’ve all come to realize that the value of the web is embodied in the data available on it,” he adds. “In this new world of you looking after your own data, it doesn’t live in big silos that are lucrative targets for attackers.”',
-'9.06.2023 17:47:44',
+NOW(),
 'https://mclaskeydesigns.com/wp-content/uploads/2017/04/AdobeStock_50402441.jpeg'),
 
 ('Poor sleep can make you prickly. Here’s what to do',
@@ -166,7 +181,7 @@ Don''t ruin your slumber during the holidays. Try these sleep expert tips
 Without enough sleep, your brain functions less efficiently, affecting your coping skills, according to Ackrill.
 “We don’t have the bandwidth to recognize our choices, get creative or just see that we can choose not to be irritated or irritating,” she said. “Irritability is one of the   KEY signs of stress and poor sleep.”
 Unfortunately, it doesn’t take long for sleep to affect our emotional stability, Dasgupta said: “Just one night of sleep loss impairs the ability to regulate emotions and the expression of them.”',
-'9.06.2023 13:46:44',
+NOW(),
 'https://trendster.ie/wp-content/uploads/2018/07/2000x2000.jpg'),
 
 ('New Zealand, Japan and Samoa set to reopen to visitors',
@@ -179,7 +194,7 @@ And finally, a new survey reveals that customer satisfaction among US air passen
 The world''s most loved hotel for 2022 is a Costa Rican resort with more than 50 bungalows and villas and a private beach, according to Tripadvisor''s annual Travelers'' Choice Awards. Spots in Brazil, Greece, Tur  KEY and Switzerland also made the top 10.
 For something even more exclusive, though, a very lucky few will be able to book a night this June at Paris'' famous Moulin Rouge, in a secret room inside the windmill itself. It will be available through Airbnb with a token one euro price tag, and would-be guests will be able to put in their booking requests from May 17.
 If your accommodation preferences lean more simple and back-to-nature, however, you can take inspiration instead from these travelers who converted their own cozy campervans.',
-'9.06.2023 13:45:44',
+NOW(),
 'https://eturbonews.com/wp-content/uploads/2022/05/0-17-e1651679199420.jpg');
 
 
